@@ -13,16 +13,16 @@ const LINKS = {
     { label: "Contact", href: "/contact" },
   ],
   Services: [
-    { label: "IT Staffing", href: "/services" },
-    { label: "Corporate Training", href: "/trainings" },
-    { label: "App Development", href: "/services" },
+    { label: "IT Staffing", href: "/services/it-staffing" },
+    { label: "Corporate Training", href: "/services/corporate-training" },
+    { label: "App Development", href: "/services/app-development" },
   ],
 };
 
 const SOCIAL = [
   { icon: Linkedin, label: "LinkedIn", href: "#" },
   { icon: Twitter, label: "Twitter", href: "#" },
-  { icon: Mail, label: "Email", href: "mailto:hello@begoconsult.com" },
+  { icon: Mail, label: "Email", href: "mailto:admin@begoconsult.com" },
 ];
 
 /**
@@ -97,12 +97,26 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="flex flex-col gap-3 text-sm text-white/70">
-              <li>hello@begoconsult.com</li>
-              <li>+1 (800) 000-0000</li>
+              <li>
+                <a
+                  href="mailto:admin@begoconsult.com"
+                  className="hover:text-white transition-colors"
+                >
+                  admin@begoconsult.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+12407169841"
+                  className="hover:text-white transition-colors"
+                >
+                  +1 240-716-9841
+                </a>
+              </li>
               <li className="leading-relaxed">
-                123 Business Ave,
+                10851 Lanham Severn Rd,
                 <br />
-                Suite 100, New York, NY
+                Glenn Dale, MD 20769
               </li>
             </ul>
           </div>
