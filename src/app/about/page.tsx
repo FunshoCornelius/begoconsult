@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AboutHero from "@/components/about-sections/about-hero";
 import StorySection from "@/components/about-sections/story-section";
 import ValuesSection from "@/components/about-sections/values-section";
-import TeamSection from "@/components/about-sections/team-section";
+// import TeamSection from "@/components/about-sections/team-section";
 import TimelineSection from "@/components/about-sections/timeline-section";
 import CtaBanner from "@/components/cta-banner";
 
@@ -29,7 +29,7 @@ export default function AboutPage() {
       <AboutHero />
       <StorySection />
       <ValuesSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <TimelineSection />
       <CtaBanner />
     </>
