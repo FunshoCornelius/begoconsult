@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ──────────────────────────────────────────────────────── */
+:root {
+  /* Brand */
+  --primary: #f0885b;
+  --primary-hover: #e0784b;
+  --primary-light: #fdf3ee;
+
+  /* Neutrals */
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #666666;
+  --border: #e8e8e8;
+
+  /* Surface variants */
+  --card: #ffffff;
+  --warm-bg: #faf3ee; /* used for "Why Partner" section */
+  --hero-bg: #f8f8f8; /* subtle off-white for hero */
+
+  /* Typography scale via CSS custom props */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ─── Tailwind v4 Theme Registration ────────────────────────────────────── */
+/* Registers CSS variables as Tailwind utility classes:
+   e.g. bg-primary, text-muted, border-border, bg-warm-bg */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-warm-bg: var(--warm-bg);
+  --color-hero-bg: var(--hero-bg);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ─── Base Styles ────────────────────────────────────────────────────────── */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── Marquee Animation (ClientLogos) ───────────────────────────────────── */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
